@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src=""></script>
+    <title>Chess-Games</title>
+</head>
+<body>
+    <!-- <div class="file_a">
+        <div id="a8" class="square"></div>
+        <div id="a7" class="square"></div>
+        <div id="a6" class="square"></div>
+        <div id="a5" class="square"></div>
+        <div id="a4" class="square"></div>
+        <div id="a3" class="square"></div>
+        <div id="a2" class="square"></div>
+        <div id="a1" class="square"></div>
+    </div>
+    <div class="file_b">
+        <div id="b8" class="square"></div>
+        <div id="b7" class="square"></div>
+        <div id="b6" class="square"></div>
+        <div id="b5" class="square"></div>
+        <div id="b4" class="square"></div>
+        <div id="b3" class="square"></div>
+        <div id="b2" class="square"></div>
+        <div id="b1" class="square"></div>
+    </div>
+    <div class="file_c">
+        <div id="c8" class="square"></div>
+        <div id="c7" class="square"></div>
+        <div id="c6" class="square"></div>
+        <div id="c5" class="square"></div>
+        <div id="c4" class="square"></div>
+        <div id="c3" class="square"></div>
+        <div id="c2" class="square"></div>
+        <div id="c1" class="square"></div>
+    </div>
+    <div class="file_d">
+        <div id="d8" class="square"></div>
+        <div id="d7" class="square"></div>
+        <div id="d6" class="square"></div>
+        <div id="d5" class="square"></div>
+        <div id="d4" class="square"></div>
+        <div id="d3" class="square"></div>
+        <div id="d2" class="square"></div>
+        <div id="d1" class="square"></div>
+    </div>
+    <div class="file_e">
+        <div id="e8" class="square"></div>
+        <div id="e7" class="square"></div>
+        <div id="e6" class="square"></div>
+        <div id="e5" class="square"></div>
+        <div id="e4" class="square"></div>
+        <div id="e3" class="square"></div>
+        <div id="e2" class="square"></div>
+        <div id="e1" class="square"></div>
+    </div>
+    <div class="file_f">
+        <div id="f8" class="square"></div>
+        <div id="f7" class="square"></div>
+        <div id="f6" class="square"></div>
+        <div id="f5" class="square"></div>
+        <div id="f4" class="square"></div>
+        <div id="f3" class="square"></div>
+        <div id="f2" class="square"></div>
+        <div id="f1" class="square"></div>
+    </div>
+    <div class="file_g">
+        <div id="g8" class="square"></div>
+        <div id="g7" class="square"></div>
+        <div id="g6" class="square"></div>
+        <div id="g5" class="square"></div>
+        <div id="g4" class="square"></div>
+        <div id="g3" class="square"></div>
+        <div id="g2" class="square"></div>
+        <div id="g1" class="square"></div>
+    </div>
+    <div class="file_h">
+        <div id="h8" class="square"></div>
+        <div id="h7" class="square"></div>
+        <div id="h6" class="square"></div>
+        <div id="h5" class="square"></div>
+        <div id="h4" class="square"></div>
+        <div id="h3" class="square"></div>
+        <div id="h2" class="square"></div>
+        <div id="h1" class="square"></div>
+    </div> -->
+
+    <!-- #1 -->
+    <div class="dad_container">
+        <div class="info_black_container">
+            <a href="#">
+                <img src="img/avata/huong.jpg" alt="" class="info_black_img">
+            </a>
+            <div class="info_black_user">
+                <div class="info_black_name">Lê Thị Thu Hường</div>
+                <div class="info_black_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_black" class="info_black_clock">1:00</div> -->
+        </div>
+        <div id="board1" class="chess_board_container">
+            <div class="file_a">
+                <div id="a8" class="square"></div>
+                <div id="a7" class="square"></div>
+                <div id="a6" class="square"></div>
+                <div id="a5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="a4" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="a3" class="square"></div>
+                <div id="a2" class="square"></div>
+                <div id="a1" class="square"></div>
+            </div>
+            <div class="file_b">
+                <div id="b8" class="square"></div>
+                <div id="b7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="b6" class="square"></div>
+                <div id="b5" class="square"></div>
+                <div id="b4" class="square"></div>
+                <div id="b3" class="square"></div>
+                <div id="b2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="b1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_c">
+                <div id="c8" class="square"></div>
+                <div id="c7" class="square"></div>
+                <div id="c6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="c5" class="square"></div>
+                <div id="c4" class="square"></div>
+                <div id="c3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="c2" class="square"></div>
+                <div id="c1" class="square"><img src="img/pieces/white/bishop.png" alt=""></div>
+            </div>
+            <div class="file_d">
+                <div id="d8" class="square"></div>
+                <div id="d7" class="square"><img src="img/pieces/black/knight.png" alt=""></div>
+                <div id="d6" class="square"><img src="img/pieces/black/bishop.png" alt=""></div>
+                <div id="d5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="d4" class="square"></div>
+                <div id="d3" class="square"><img src="img/pieces/white/bishop.png" alt=""></div>
+                <div id="d2" class="square"></div>
+                <div id="d1" class="square"></div>
+            </div>
+            <div class="file_e">
+                <div id="e8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="e7" class="square"></div>
+                <div id="e6" class="square"></div>
+                <div id="e5" class="square"></div>
+                <div id="e4" class="square"></div>
+                <div id="e3" class="square"></div>
+                <div id="e2" class="square"></div>
+                <div id="e1" class="square"></div>
+            </div>
+            <div class="file_f">
+                <div id="f8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="f7" class="square"></div>
+                <div id="f6" class="square"><img src="img/pieces/black/knight.png" alt=""></div>
+                <div id="f5" class="square"></div>
+                <div id="f4" class="square"></div>
+                <div id="f3" class="square"><img src="img/pieces/white/knight.png" alt=""></div>
+                <div id="f2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="f1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_g">
+                <div id="g8" class="square"><img src="img/pieces/black/king.png" alt=""></div>
+                <div id="g7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="g6" class="square"></div>
+                <div id="g5" class="square"></div>
+                <div id="g4" class="square"></div>
+                <div id="g3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="g2" class="square"><img src="img/pieces/white/king.png" alt=""></div>
+                <div id="g1" class="square"></div>
+            </div>
+            <div class="file_h">
+                <div id="h8" class="square"></div>
+                <div id="h7" class="square">
+                    <img src="img/pieces/black/pawn.png" alt="">
+                </div>
+                <div id="h6" class="square"></div>
+                <div id="h5" class="square"></div>
+                <div id="h4" class="square"></div>
+                <div id="h3" class="square"></div>
+                <div id="h2" class="square">
+                    <img src="img/pieces/white/pawn.png" alt="">
+                </div>
+                <div id="h1" class="square"></div>
+            </div>
+        </div>
+        <div class="info_white_container">
+            <img src="img/avata/tu.jpg" alt="" class="info_white_img">
+            <div class="info_white_user">
+                <div class="info_white_name">Lê Minh Tú</div>
+                <div class="info_white_city">Binh Dương</div>
+            </div>
+            <!-- <div id="timer_white" class="info_white_clock">1:00</div> -->
+        </div>
+    </div>
+    <hr>
+
+    <!-- #2 -->
+    <div class="dad_container">
+        <div class="info_black_container">
+            <a href="#">
+                <img src="img/avata/nham.jpg" alt="" class="info_black_img">
+            </a>
+            <div class="info_black_user">
+                <div class="info_black_name">Phạm Thị Linh Nhâm</div>
+                <div class="info_black_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_black" class="info_black_clock">1:00</div> -->
+        </div>
+        <div id="board2" class="chess_board_container">
+            <div class="file_a">
+                <div id="a8" class="square"></div>
+                <div id="a7" class="square"></div>
+                <div id="a6" class="square"></div>
+                <div id="a5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="a4" class="square"><img src="img/pieces/white/knight.png" alt=""></div>
+                <div id="a3" class="square"></div>
+                <div id="a2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="a1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_b">
+                <div id="b8" class="square"></div>
+                <div id="b7" class="square"></div>
+                <div id="b6" class="square"></div>
+                <div id="b5" class="square"></div>
+                <div id="b4" class="square"></div>
+                <div id="b3" class="square"></div>
+                <div id="b2" class="square">
+                    <img src="img/pieces/white/pawn.png" alt="">
+                </div>
+                <div id="b1" class="square"></div>
+            </div>
+            <div class="file_c">
+                <div id="c8" class="square"></div>
+                <div id="c7" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="c6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="c5" class="square"></div>
+                <div id="c4" class="square"></div>
+                <div id="c3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="c2" class="square"></div>
+                <div id="c1" class="square"></div>
+            </div>
+            <div class="file_d">
+                <div id="d8" class="square"></div>
+                <div id="d7" class="square"><img src="img/pieces/black/knight.png" alt=""></div>
+                <div id="d6" class="square"><img src="img/pieces/black/queen.png" alt=""></div>
+                <div id="d5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="d4" class="square"></div>
+                <div id="d3" class="square"></div>
+                <div id="d2" class="square"></div>
+                <div id="d1" class="square"></div>
+            </div>
+            <div class="file_e">
+                <div id="e8" class="square"></div>
+                <div id="e7" class="square"></div>
+                <div id="e6" class="square"></div>
+                <div id="e5" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="e4" class="square"></div>
+                <div id="e3" class="square"></div>
+                <div id="e2" class="square"></div>
+                <div id="e1" class="square"></div>
+            </div>
+            <div class="file_f">
+                <div id="f8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="f7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="f6" class="square"></div>
+                <div id="f5" class="square"></div>
+                <div id="f4" class="square"></div>
+                <div id="f3" class="square"></div>
+                <div id="f2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="f1" class="square"></div>
+            </div>
+            <div class="file_g">
+                <div id="g8" class="square"><img src="img/pieces/black/king.png" alt=""></div>
+                <div id="g7" class="square"></div>
+                <div id="g6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="g5" class="square"></div>
+                <div id="g4" class="square"></div>
+                <div id="g3" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+                <div id="g2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="g1" class="square"><img src="img/pieces/white/king.png" alt=""></div>
+            </div>
+            <div class="file_h">
+                <div id="h8" class="square"></div>
+                <div id="h7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="h6" class="square"></div>
+                <div id="h5" class="square"></div>
+                <div id="h4" class="square"><img src="img/pieces/white/queen.png" alt=""></div>
+                <div id="h3" class="square"></div>
+                <div id="h2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="h1" class="square"></div>
+            </div>
+        </div>
+        <div class="info_white_container">
+            <img src="img/avata/huyen.jpg" alt="" class="info_white_img">
+            <div class="info_white_user">
+                <div class="info_white_name">Phan Dân Huyền</div>
+                <div class="info_white_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_white" class="info_white_clock">1:00</div> -->
+        </div>
+    </div>
+    <hr>
+
+    <!-- #3 -->
+    <div class="dad_container">
+        <div class="info_black_container">
+            <a href="#">
+                <img src="img/avata/thao.jpg" alt="" class="info_black_img">
+            </a>
+            <div class="info_black_user">
+                <div class="info_black_name">Lê Thanh Thảo</div>
+                <div class="info_black_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_black" class="info_black_clock">1:00</div> -->
+        </div>
+        <div id="board3" class="chess_board_container">
+            <div class="file_a">
+                <div id="a8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="a7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="a6" class="square"></div>
+                <div id="a5" class="square"></div>
+                <div id="a4" class="square"></div>
+                <div id="a3" class="square"></div>
+                <div id="a2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="a1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_b">
+                <div id="b8" class="square"></div>
+                <div id="b7" class="square"></div>
+                <div id="b6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="b5" class="square"></div>
+                <div id="b4" class="square"></div>
+                <div id="b3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="b2" class="square"></div>
+                <div id="b1" class="square"></div>
+            </div>
+            <div class="file_c">
+                <div id="c8" class="square"></div>
+                <div id="c7" class="square"></div>
+                <div id="c6" class="square"><img src="img/pieces/black/knight.png" alt=""></div>
+                <div id="c5" class="square"></div>
+                <div id="c4" class="square"></div>
+                <div id="c3" class="square"></div>
+                <div id="c2" class="square"></div>
+                <div id="c1" class="square"></div>
+            </div>
+            <div class="file_d">
+                <div id="d8" class="square"></div>
+                <div id="d7" class="square"></div>
+                <div id="d6" class="square"></div>
+                <div id="d5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="d4" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="d3" class="square"></div>
+                <div id="d2" class="square"><img src="img/pieces/white/knight.png" alt=""></div>
+                <div id="d1" class="square"><img src="img/pieces/white/queen.png" alt=""></div>
+            </div>
+            <div class="file_e">
+                <div id="e8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="e7" class="square"></div>
+                <div id="e6" class="square"></div>
+                <div id="e5" class="square"></div>
+                <div id="e4" class="square"></div>
+                <div id="e3" class="square"><img src="img/pieces/black/queen.png" alt=""></div>
+                <div id="e2" class="square"><img src="img/pieces/white/knight.png" alt=""></div>
+                <div id="e1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_f">
+                <div id="f8" class="square"></div>
+                <div id="f7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="f6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="f5" class="square"></div>
+                <div id="f4" class="square"></div>
+                <div id="f3" class="square"><img src="img/pieces/black/bishop.png" alt=""></div>
+                <div id="f2" class="square"></div>
+                <div id="f1" class="square"><img src="img/pieces/white/king.png" alt=""></div>
+            </div>
+            <div class="file_g">
+                <div id="g8" class="square"><img src="img/pieces/black/king.png" alt=""></div>
+                <div id="g7" class="square"></div>
+                <div id="g6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="g5" class="square"></div>
+                <div id="g4" class="square"></div>
+                <div id="g3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="g2" class="square"></div>
+                <div id="g1" class="square"></div>
+            </div>
+            <div class="file_h">
+                <div id="h8" class="square"></div>
+                <div id="h7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="h6" class="square"></div>
+                <div id="h5" class="square"></div>
+                <div id="h4" class="square"></div>
+                <div id="h3" class="square"><img src="img/pieces/white/bishop.png" alt=""></div>
+                <div id="h2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="h1" class="square"></div>
+            </div>
+        </div>
+        <div class="info_white_container">
+            <img src="img/avata/nhu.jpg" alt="" class="info_white_img">
+            <div class="info_white_user">
+                <div class="info_white_name">Phan Nguyễn Hà Như</div>
+                <div class="info_white_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_white" class="info_white_clock">1:00</div> -->
+        </div>
+    </div>
+    <hr>
+
+    <!-- #4 -->
+    <div class="dad_container">
+        <div class="info_black_container">
+            <a href="#">
+                <img src="img/avata/binh.jpg" alt="" class="info_black_img">
+            </a>
+            <div class="info_black_user">
+                <div class="info_black_name">Dương Thanh Bình</div>
+                <div class="info_black_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_black" class="info_black_clock">1:00</div> -->
+        </div>
+        <div id="board4" class="chess_board_container">
+             <div class="file_a">
+                <div id="a8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="a7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="a6" class="square"></div>
+                <div id="a5" class="square"></div>
+                <div id="a4" class="square"></div>
+                <div id="a3" class="square"><img src="img/pieces/white/bishop.png" alt=""></div>
+                <div id="a2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="a1" class="square"></div>
+            </div>
+            <div class="file_b">
+                <div id="b8" class="square"></div>
+                <div id="b7" class="square"></div>
+                <div id="b6" class="square"></div>
+                <div id="b5" class="square"></div>
+                <div id="b4" class="square"></div>
+                <div id="b3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="b2" class="square"></div>
+                <div id="b1" class="square"></div>
+            </div>
+            <div class="file_c">
+                <div id="c8" class="square"><img src="img/pieces/black/bishop.png" alt=""></div>
+                <div id="c7" class="square"></div>
+                <div id="c6" class="square"><img src="img/pieces/black/knight.png" alt=""></div>
+                <div id="c5" class="square"><img src="img/pieces/white/knight.png" alt=""></div>
+                <div id="c4" class="square"><img src="img/pieces/white/queen.png" alt=""></div>
+                <div id="c3" class="square"></div>
+                <div id="c2" class="square"></div>
+                <div id="c1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_d">
+                <div id="d8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="d7" class="square"></div>
+                <div id="d6" class="square"></div>
+                <div id="d5" class="square"><img src="img/pieces/black/queen.png" alt=""></div>
+                <div id="d4" class="square"></div>
+                <div id="d3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="d2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="d1" class="square"></div>
+            </div>
+            <div class="file_e">
+                <div id="e8" class="square"></div>
+                <div id="e7" class="square"></div>
+                <div id="e6" class="square"></div>
+                <div id="e5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="e4" class="square"></div>
+                <div id="e3" class="square"></div>
+                <div id="e2" class="square"></div>
+                <div id="e1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_f">
+                <div id="f8" class="square"><img src="img/pieces/black/bishop.png" alt=""></div>
+                <div id="f7" class="square"></div>
+                <div id="f6" class="square"></div>
+                <div id="f5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="f4" class="square"></div>
+                <div id="f3" class="square"><img src="img/pieces/white/knight.png" alt=""></div>
+                <div id="f2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="f1" class="square"></div>
+            </div>
+            <div class="file_g">
+                <div id="g8" class="square"><img src="img/pieces/black/king.png" alt=""></div>
+                <div id="g7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="g6" class="square"></div>
+                <div id="g5" class="square"></div>
+                <div id="g4" class="square"></div>
+                <div id="g3" class="square"></div>
+                <div id="g2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="g1" class="square"><img src="img/pieces/white/king.png" alt=""></div>
+            </div>
+            <div class="file_h">
+                <div id="h8" class="square"></div>
+                <div id="h7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="h6" class="square"></div>
+                <div id="h5" class="square"></div>
+                <div id="h4" class="square"></div>
+                <div id="h3" class="square"></div>
+                <div id="h2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="h1" class="square"></div>
+            </div>
+        </div>
+        <div class="info_white_container">
+            <img src="img/avata/chuong.jpg" alt="" class="info_white_img">
+            <div class="info_white_user">
+                <div class="info_white_name">Dương Thiện Chương</div>
+                <div class="info_white_city">Binh Duong</div>
+            </div>
+            <!-- <div id="timer_white" class="info_white_clock">1:00</div> -->
+        </div>
+    </div>
+    <hr>
+
+    <!-- #5 -->
+    <div class="dad_container">
+        <div class="info_black_container">
+            <a href="#">
+                <img src="img/avata/ducanh.jpg" alt="" class="info_black_img">
+            </a>
+            <div class="info_black_user">
+                <div class="info_black_name">Phùng Đức Anh</div>
+                <div class="info_black_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_black" class="info_black_clock">1:00</div> -->
+        </div>
+        <div id="board5" class="chess_board_container">
+            <div class="file_a">
+                <div id="a8" class="square"></div>
+                <div id="a7" class="square"></div>
+                <div id="a6" class="square"></div>
+                <div id="a5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="a4" class="square"></div>
+                <div id="a3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="a2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="a1" class="square"></div>
+            </div>
+            <div class="file_b">
+                <div id="b8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="b7" class="square"></div>
+                <div id="b6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="b5" class="square"></div>
+                <div id="b4" class="square"></div>
+                <div id="b3" class="square"></div>
+                <div id="b2" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+                <div id="b1" class="square"></div>
+            </div>
+            <div class="file_c">
+                <div id="c8" class="square"></div>
+                <div id="c7" class="square"></div>
+                <div id="c6" class="square"></div>
+                <div id="c5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="c4" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="c3" class="square"></div>
+                <div id="c2" class="square"></div>
+                <div id="c1" class="square"></div>
+            </div>
+            <div class="file_d">
+                <div id="d8" class="square"></div>
+                <div id="d7" class="square"><img src="img/pieces/black/knight.png" alt=""></div>
+                <div id="d6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="d5" class="square"></div>
+                <div id="d4" class="square"><img src="img/pieces/black/knight.png" alt=""></div>
+                <div id="d3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="d2" class="square"></div>
+                <div id="d1" class="square"></div>
+            </div>
+            <div class="file_e">
+                <div id="e8" class="square"></div>
+                <div id="e7" class="square"></div>
+                <div id="e6" class="square"><img src="img/pieces/black/bishop.png" alt=""></div>
+                <div id="e5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="e4" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="e3" class="square"><img src="img/pieces/white/queen.png" alt=""></div>
+                <div id="e2" class="square"></div>
+                <div id="e1" class="square"></div>
+            </div>
+            <div class="file_f">
+                <div id="f8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="f7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="f6" class="square"></div>
+                <div id="f5" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="f4" class="square"></div>
+                <div id="f3" class="square"></div>
+                <div id="f2" class="square"></div>
+                <div id="f1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_g">
+                <div id="g8" class="square"><img src="img/pieces/black/king.png" alt=""></div>
+                <div id="g7" class="square"></div>
+                <div id="g6" class="square"></div>
+                <div id="g5" class="square"></div>
+                <div id="g4" class="square"></div>
+                <div id="g3" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="g2" class="square"><img src="img/pieces/white/bishop.png" alt=""></div>
+                <div id="g1" class="square"><img src="img/pieces/white/king.png" alt=""></div>
+            </div>
+            <div class="file_h">
+                <div id="h8" class="square"></div>
+                <div id="h7" class="square"></div>
+                <div id="h6" class="square"><img src="img/pieces/white/bishop.png" alt=""></div>
+                <div id="h5" class="square"></div>
+                <div id="h4" class="square"><img src="img/pieces/black/queen.png" alt=""></div>
+                <div id="h3" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="h2" class="square"></div>
+                <div id="h1" class="square"></div>
+            </div>
+        </div>
+        <div class="info_white_container">
+            <img src="img/avata/truc.jpg" alt="" class="info_white_img">
+            <div class="info_white_user">
+                <div class="info_white_name">Võ Mai Trúc</div>
+                <div class="info_white_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_white" class="info_white_clock">1:00</div> -->
+        </div>
+    </div>
+    <hr>
+
+    <!-- #6 -->
+    <div class="dad_container">
+        <div class="info_black_container">
+            <a href="#">
+                <img src="img/avata/trieu.jpg" alt="" class="info_black_img">
+            </a>
+            <div class="info_black_user">
+                <div class="info_black_name">Phan Minh Triều</div>
+                <div class="info_black_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_black" class="info_black_clock">1:00</div> -->
+        </div>
+        <div id="board6" class="chess_board_container">
+            <div class="file_a">
+                <div id="a8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="a7" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="a6" class="square"></div>
+                <div id="a5" class="square"></div>
+                <div id="a4" class="square"></div>
+                <div id="a3" class="square"></div>
+                <div id="a2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="a1" class="square"></div>
+            </div>
+            <div class="file_b">
+                <div id="b8" class="square"></div>
+                <div id="b7" class="square"></div>
+                <div id="b6" class="square"></div>
+                <div id="b5" class="square"></div>
+                <div id="b4" class="square"><img src="img/pieces/white/bishop.png" alt=""></div>
+                <div id="b3" class="square"><img src="img/pieces/white/knight.png" alt=""></div>
+                <div id="b2" class="square"></div>
+                <div id="b1" class="square"></div>
+            </div>
+            <div class="file_c">
+                <div id="c8" class="square"><img src="img/pieces/black/queen.png" alt=""></div>
+                <div id="c7" class="square"></div>
+                <div id="c6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="c5" class="square"></div>
+                <div id="c4" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="c3" class="square"></div>
+                <div id="c2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="c1" class="square"></div>
+            </div>
+            <div class="file_d">
+                <div id="d8" class="square"></div>
+                <div id="d7" class="square"></div>
+                <div id="d6" class="square"></div>
+                <div id="d5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="d4" class="square"></div>
+                <div id="d3" class="square"></div>
+                <div id="d2" class="square"></div>
+                <div id="d1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_e">
+                <div id="e8" class="square"></div>
+                <div id="e7" class="square"></div>
+                <div id="e6" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="e5" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="e4" class="square"></div>
+                <div id="e3" class="square"></div>
+                <div id="e2" class="square"></div>
+                <div id="e1" class="square"><img src="img/pieces/white/queen.png" alt=""></div>
+            </div>
+            <div class="file_f">
+                <div id="f8" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="f7" class="square"></div>
+                <div id="f6" class="square"></div>
+                <div id="f5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="f4" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="f3" class="square"></div>
+                <div id="f2" class="square"></div>
+                <div id="f1" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+            </div>
+            <div class="file_g">
+                <div id="g8" class="square"><img src="img/pieces/black/king.png" alt=""></div>
+                <div id="g7" class="square"><img src="img/pieces/black/bishop.png" alt=""></div>
+                <div id="g6" class="square"><img src="img/pieces/black/knight.png" alt=""></div>
+                <div id="g5" class="square"></div>
+                <div id="g4" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="g3" class="square"></div>
+                <div id="g2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="g1" class="square"><img src="img/pieces/white/king.png" alt=""></div>
+            </div>
+            <div class="file_h">
+                <div id="h8" class="square"></div>
+                <div id="h7" class="square"></div>
+                <div id="h6" class="square"></div>
+                <div id="h5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="h4" class="square"></div>
+                <div id="h3" class="square"></div>
+                <div id="h2" class="square"><img src="img/pieces/white/pawn.png" alt=""></div>
+                <div id="h1" class="square"></div>
+            </div>
+        </div>
+        <div class="info_white_container">
+            <img src="img/avata/trang.jpg" alt="" class="info_white_img">
+            <div class="info_white_user">
+                <div class="info_white_name">Nguyễn Thu Trang</div>
+                <div class="info_white_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_white" class="info_white_clock">1:00</div> -->
+        </div>
+    </div>
+    <hr>
+
+    <!-- #7 -->
+    <div class="dad_container">
+        <div class="info_black_container">
+            <a href="#">
+                <img src="img/avata/ngoc.jpg" alt="" class="info_black_img">
+            </a>
+            <div class="info_black_user">
+                <div class="info_black_name">Đặng Bích Ngọc</div>
+                <div class="info_black_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_black" class="info_black_clock">1:00</div> -->
+        </div>
+        <div id="board7" class="chess_board_container">
+            <div class="file_a">
+                <div id="a8" class="square"></div>
+                <div id="a7" class="square"></div>
+                <div id="a6" class="square"></div>
+                <div id="a5" class="square"></div>
+                <div id="a4" class="square"></div>
+                <div id="a3" class="square"></div>
+                <div id="a2" class="square"></div>
+                <div id="a1" class="square"></div>
+            </div>
+            <div class="file_b">
+                <div id="b8" class="square"></div>
+                <div id="b7" class="square"></div>
+                <div id="b6" class="square"></div>
+                <div id="b5" class="square"></div>
+                <div id="b4" class="square"><img src="img/pieces/white/rook.png" alt=""></div>
+                <div id="b3" class="square"></div>
+                <div id="b2" class="square"></div>
+                <div id="b1" class="square"></div>
+            </div>
+            <div class="file_c">
+                <div id="c8" class="square"></div>
+                <div id="c7" class="square"></div>
+                <div id="c6" class="square"></div>
+                <div id="c5" class="square"><img src="img/pieces/black/rook.png" alt=""></div>
+                <div id="c4" class="square"></div>
+                <div id="c3" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="c2" class="square"><img src="img/pieces/white/king.png" alt=""></div>
+                <div id="c1" class="square"></div>
+            </div>
+            <div class="file_d">
+                <div id="d8" class="square"></div>
+                <div id="d7" class="square"></div>
+                <div id="d6" class="square"></div>
+                <div id="d5" class="square"></div>
+                <div id="d4" class="square"></div>
+                <div id="d3" class="square"></div>
+                <div id="d2" class="square"></div>
+                <div id="d1" class="square"></div>
+            </div>
+            <div class="file_e">
+                <div id="e8" class="square"></div>
+                <div id="e7" class="square"></div>
+                <div id="e6" class="square"></div>
+                <div id="e5" class="square"></div>
+                <div id="e4" class="square"></div>
+                <div id="e3" class="square"></div>
+                <div id="e2" class="square"></div>
+                <div id="e1" class="square"></div>
+            </div>
+            <div class="file_f">
+                <div id="f8" class="square"></div>
+                <div id="f7" class="square"></div>
+                <div id="f6" class="square"></div>
+                <div id="f5" class="square"></div>
+                <div id="f4" class="square"></div>
+                <div id="f3" class="square"><img src="img/pieces/black/king.png" alt=""></div>
+                <div id="f2" class="square"></div>
+                <div id="f1" class="square"></div>
+            </div>
+            <div class="file_g">
+                <div id="g8" class="square"></div>
+                <div id="g7" class="square"></div>
+                <div id="g6" class="square"></div>
+                <div id="g5" class="square"><img src="img/pieces/black/pawn.png" alt=""></div>
+                <div id="g4" class="square"></div>
+                <div id="g3" class="square"></div>
+                <div id="g2" class="square"></div>
+                <div id="g1" class="square"></div>
+            </div>
+            <div class="file_h">
+                <div id="h8" class="square"></div>
+                <div id="h7" class="square"></div>
+                <div id="h6" class="square"></div>
+                <div id="h5" class="square"></div>
+                <div id="h4" class="square"></div>
+                <div id="h3" class="square"><img src="img/pieces/white/bishop.png" alt=""></div>
+                <div id="h2" class="square"></div>
+                <div id="h1" class="square"></div>
+            </div>
+        </div>
+        <div class="info_white_container">
+            <img src="img/avata/hieu.jpg" alt="" class="info_white_img">
+            <div class="info_white_user">
+                <div class="info_white_name">Lê Ngọc Hiếu</div>
+                <div class="info_white_city">Bình Dương</div>
+            </div>
+            <!-- <div id="timer_white" class="info_white_clock">1:00</div> -->
+        </div>
+    </div>
+
+    
+    <script src="js/auto_move.js"></script>
+</body>
+</html>

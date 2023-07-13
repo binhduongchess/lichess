@@ -1,0 +1,172 @@
+/* Black block: #B58863*/
+/* White block: #F0D9B5*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.menu{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0d9b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container{
+    width: 500px;
+    height: 500px;
+    background-color: #B58863;
+}
+
+.square{
+    width: 70px;
+    height: 70px;
+    background-color: #B59963;
+}
+
+.dad_container{
+    display: flex;
+    display: grid;
+    /* Căn giữa theo trục x */
+    align-items: center; 
+    /* Căn giữa theo trục y */
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info_black_container{
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    display: flex;
+    
+}
+
+.info_white_container{
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    display: flex;
+    
+}
+
+.info_black_img{
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    background-size: cover;
+}
+
+.info_white_img{
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.info_black_user{
+    margin-top: 0.5rem;
+    align-self: center;
+    flex: 1 1 0;
+}
+
+.info_white_user{
+    margin-top: 0.5rem;
+    align-self: center;
+    flex: 1 1 0;
+}
+
+.info_black_clock{
+    background-color: #2b2926;
+    font-size: 40px;
+    color: #82817F;
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+}
+
+.info_white_clock{
+    background-color: #989795;
+    font-size: 40px;
+    color: #6D6C6A;
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+}
+
+.chess_board_container{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /*    square = 70px
+    =>  8 square = 70*8 = 560px 
+    =>  1 chess board = 560x560;
+    */
+    height: 560px;
+    width: 560px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.file_a .square:nth-of-type(odd){
+    /*nth-of-type là chọn phần con từ phần tử cha */
+    /*odd là số lẻ, even là số chẵn*/
+    background-color: #f0d9b5;
+}
+.file_b .square:nth-of-type(even){
+    background-color: #f0d9b5;
+}
+.file_c .square:nth-of-type(odd){
+    background-color: #f0d9b5;
+}
+.file_d .square:nth-of-type(even){
+    background-color: #f0d9b5;
+}
+.file_e .square:nth-of-type(odd){
+    background-color: #f0d9b5;
+}
+.file_f .square:nth-of-type(even){
+    background-color: #f0d9b5;
+}
+.file_g .square:nth-of-type(odd){
+    background-color: #f0d9b5;
+}
+.file_h .square:nth-of-type(even){
+    background-color: #f0d9b5;
+}
+
+img{
+    /* Tất cả con cờ đều nằm gọn trong 1 ô*/
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    .chess_board_container {
+        height: 300px;
+        width: 300px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        margin: 0 auto;
+      }
+      
+      .square {
+        width: 37.5px;
+        height: 37.5px;
+        background-color: #B59963;
+      }
+      
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+  }
+
+
+
+
+
+
+
+
+
+
